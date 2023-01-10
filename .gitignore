@@ -1,0 +1,6 @@
+build/
+isoroot/
+rubyfox.bin
+rubyfox.iso
+.idea/
+.vs/
