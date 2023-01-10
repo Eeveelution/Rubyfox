@@ -2,6 +2,9 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#include "arch/port.h"
+#include "drivers/serial/serial.h"
+
 size_t strlen(const char* str) {
     size_t length = 0;
 
@@ -31,5 +34,15 @@ void kernel_main() {
 
     for(size_t i = 0; i != message_length; i++) {
         vga_buffer[i] = vga_entry(message[i], 15);
+    }
+
+    serial_port com1;
+
+    serial_port_create(SERIAL_COM1, &com1);
+
+    while(true) {
+        for(size_t i = 0; i != message_length; i++) {
+            serial_port_write(&com1, message[i]);
+        }
     }
 }
