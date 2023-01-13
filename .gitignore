@@ -4,3 +4,4 @@ rubyfox.bin
 rubyfox.iso
 .idea/
 .vs/
+build.sh

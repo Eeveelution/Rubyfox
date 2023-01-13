@@ -22,7 +22,8 @@ for byteStr in cFindSplit:
     if str == "":
         continue
 
-    str = str[2:]
+    str = str.lstrip("./")
+    str = str.lstrip("/")
 
     objectName = "build/" + str.replace("/", "__") + ".o"
 
@@ -36,7 +37,8 @@ for byteStr in asFindSplit:
     if str == "":
         continue
 
-    str = str[2:]
+    str = str.lstrip("./")
+    str = str.lstrip("/")
 
     objectName = "build/" + str.replace("/", "__") + ".o"
 
