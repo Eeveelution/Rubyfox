@@ -47,8 +47,3 @@ for byteStr in asFindSplit:
     print(AS, str, "-o " + objectName)
 
 print(CC, "-T linker.ld -o rubyfox.bin", LDFLAGS, " ".join(objects))
-
-print("mkdir -p isoroot/boot/grub")
-print("cp rubyfox.bin isoroot/boot/rubyfox.bin")
-print("cp grub.cfg isoroot/boot/grub/grub.cfg")
-print("grub-mkrescue -o rubyfox.iso isoroot")
