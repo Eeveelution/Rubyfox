@@ -45,3 +45,12 @@ void serial_port_read_byte(serial_port* serial, uint8_t* out) {
 
     *out = inb(serial->port);
 }
+
+void serial_port_write_string(serial_port* serial, const char* data) {
+    int i = 0;
+
+    while(data[i] != 0) {
+        serial_port_write(serial, data[i]);
+        i++;
+    }
+}

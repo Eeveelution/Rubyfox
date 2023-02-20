@@ -20,6 +20,7 @@ static inline uint16_t vga_entry(unsigned char uc, uint8_t color) {
 }
 
 extern void objc_entry();
+//extern void __objc_gnu_init();
 
 void kernel_main() {
     uint16_t* vga_buffer = (uint16_t*) 0xB8000;
@@ -42,11 +43,16 @@ void kernel_main() {
 
     serial_port_create(SERIAL_COM1, &com1);
 
+    serial_port_write_string(&com1, "test\n");
+
+    //__objc_gnu_init();
     objc_entry();
 
-    while(true) {
-        for(size_t i = 0; i != message_length; i++) {
+    for(size_t i = 0; i != message_length; i++) {
             serial_port_write(&com1, message[i]);
         }
+
+    while(true) {
+        
     }
 }

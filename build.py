@@ -2,9 +2,9 @@ import subprocess
 
 CC = "i686-elf-gcc"
 AS = "i686-elf-as"
-CFLAGS = "-std=gnu99 -ffreestanding -O2 -Wall -Wextra"
-OBJCFLAGS = "-ffreestanding -nostdlib -lgcc -r"
-LDFLAGS = "-ffreestanding -O2 -nostdlib -lgcc"
+CFLAGS = "-std=gnu99 -ffreestanding -g -Wall -Wextra"
+OBJCFLAGS = "-ffreestanding -nostdlib -lgcc -r -g"
+LDFLAGS = "-ffreestanding -nostdlib -lgcc -g"
 
 cFindOutput = subprocess.check_output(['find', './', "-name", "*.c"])
 cFindSplit = cFindOutput.split(b'\n')

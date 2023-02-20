@@ -11,4 +11,4 @@ iso:
 	grub-mkrescue -o rubyfox.iso isoroot
 
 run:
-	qemu-system-i386 -kernel rubyfox.bin -serial stdio
+	qemu-system-i386 -s -kernel rubyfox.bin -serial stdio

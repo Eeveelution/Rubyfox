@@ -1,17 +1,20 @@
 @interface KernelMain 
 
-+ (void) kernelMain;
+- (id) init;
 
 @end
 
 @implementation KernelMain 
 
-+ (void) kernelMain {
-
+- (id) init {
+    return self;
 }
 
 @end
 
+static void __objc_gnu_init(void);
+
 void objc_entry() {
-    [KernelMain kernelMain];
+    __objc_gnu_init();
+    [KernelMain init];
 }

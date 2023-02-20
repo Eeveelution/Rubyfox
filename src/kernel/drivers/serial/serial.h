@@ -39,4 +39,6 @@ void serial_port_write(serial_port* serial, uint8_t data);
 /// @param out Output for read byte
 void serial_port_read_byte(serial_port* serial, uint8_t* out);
 
+void serial_port_write_string(serial_port* serial, const char* data);
+
 #endif
