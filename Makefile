@@ -1,5 +1,5 @@
 all:
-	python3 build.py > build.sh
+	python3 ./build.py > build.sh
 	chmod +x build.sh
 	mkdir -p build
 	./build.sh

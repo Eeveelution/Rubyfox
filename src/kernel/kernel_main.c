@@ -19,6 +19,8 @@ static inline uint16_t vga_entry(unsigned char uc, uint8_t color) {
     return (uint16_t) uc | (uint16_t) color << 8;
 }
 
+extern void objc_entry();
+
 void kernel_main() {
     uint16_t* vga_buffer = (uint16_t*) 0xB8000;
 
@@ -39,6 +41,8 @@ void kernel_main() {
     serial_port com1;
 
     serial_port_create(SERIAL_COM1, &com1);
+
+    objc_entry();
 
     while(true) {
         for(size_t i = 0; i != message_length; i++) {
