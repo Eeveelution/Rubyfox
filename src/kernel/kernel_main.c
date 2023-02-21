@@ -11,7 +11,6 @@ static inline uint16_t vga_entry(unsigned char uc, uint8_t color) {
 }
 
 extern void objc_entry();
-//extern void __objc_gnu_init();
 
 void kernel_main() {
     uint16_t* vga_buffer = (uint16_t*) 0xB8000;

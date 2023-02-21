@@ -5,7 +5,12 @@
 
 objc_module* current_module = NULL;
 
-void *objc_msg_lookup(objc_class *class, objc_selector *sel, ...)
+/// @brief Used by the Objective-C Compiler to look where to route function calls
+/// @param class Receiver of the message
+/// @param sel Message Selector
+/// @param Arguments
+/// @return Method Implementation
+IMP objc_msg_lookup(objc_class *class, objc_selector *sel)
 {
     serial_port port = {
         .port = SERIAL_COM1
@@ -37,6 +42,9 @@ void *objc_msg_lookup(objc_class *class, objc_selector *sel, ...)
     return 0;
 }
 
+/// @brief Used by the Objective-C Compiler to retrieve classes
+/// @param name Name of the class
+/// @return Class or 0 if none is found.
 objc_class* objc_get_class(const char *name)
 {
     objc_module* module = current_module;
@@ -60,6 +68,9 @@ objc_class* objc_get_class(const char *name)
     return 0;
 }
 
+/// @brief This is executed by __objc_gnu_init and gives you the Objective-C Module.
+/// You need this as this contains all the Compiled Class definitions, Protocols, etc.
+/// @param module Objective-C Module
 void __objc_exec_class(objc_module *module) {
     current_module = module;
 

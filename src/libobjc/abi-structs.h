@@ -2,14 +2,18 @@
 #define __OBJC_MAIN_H_
 
 typedef struct {
+    //Selector String, i.e. "writeString:stringLength:serialPort:"
     const char *sel_id;
+    //Objective-C Type Encoding
+    //v8@0:4 = void at offset 8 (return type), id (@) at offset 0 (implicit self), selector (:) at offset 4
+    //for what it's worth you can ignore the numbers and just read the types, as the offsets are
+    //there because of the Motorolla 68000 Calling Convention which was heavily stack based.
     const char *sel_types;
 } objc_selector;
 
 typedef struct objc_method_list objc_method_list;
 
-typedef struct objc_class
-{
+typedef struct objc_class {
     struct objc_class *class_pointer;
     struct objc_class *super_class;
 
