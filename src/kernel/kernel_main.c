@@ -4,16 +4,7 @@
 
 #include "arch/port.h"
 #include "drivers/serial/serial.h"
-
-size_t strlen(const char* str) {
-    size_t length = 0;
-
-    while(str[length]) {
-        length++;
-    }
-
-    return length;
-}
+#include "string.h"
 
 static inline uint16_t vga_entry(unsigned char uc, uint8_t color) {
     return (uint16_t) uc | (uint16_t) color << 8;

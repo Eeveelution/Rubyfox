@@ -2,8 +2,8 @@ import subprocess
 
 CC = "i686-elf-gcc"
 AS = "i686-elf-as"
-CFLAGS = "-std=gnu99 -ffreestanding -g -Wall -Wextra"
-OBJCFLAGS = "-ffreestanding -nostdlib -lgcc -r -g"
+CFLAGS = "-std=gnu99 -ffreestanding -g -Wall -Wextra -I./src"
+OBJCFLAGS = "-ffreestanding -nostdlib -lgcc -r -g -I./src"
 LDFLAGS = "-ffreestanding -nostdlib -lgcc -g"
 
 cFindOutput = subprocess.check_output(['find', './', "-name", "*.c"])
