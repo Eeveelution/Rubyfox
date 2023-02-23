@@ -41,11 +41,8 @@ typedef struct objc_object {
 typedef id (*IMP)(id, objc_selector*, ...); 
 
 typedef struct {
-    union {
-        const char* name;
-        objc_selector* selector;
-    } method_name;
-
+    //objc_selector* selector;
+    const char* method_name;
     const char* method_types;
 
     IMP method_implementation;
@@ -75,17 +72,14 @@ typedef struct objc_symbol_table {
 
     /// @brief Table of Selectors that are referenced in this module; 
     /// List is terminated with sel_id == NULL && sel_types == NULL
-    objc_selector* referenced_selectors;
+    objc_selector* referenced_selectors[1];
 
     /// @brief Number of defined Classes
     unsigned short class_count;
     /// @brief Number of defined Categories
     unsigned short category_count;
 
-    union {
-        objc_class class_ptr;
-        objc_category category_ptr;
-    } *class_category_definitions;
+    void* class_category_definitions[1];
 } objc_symbol_table;
 
 typedef struct objc_module {

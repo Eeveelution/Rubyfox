@@ -4,6 +4,8 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#include "../../arch/port.h"
+
 #define SERIAL_COM1 0x3F8
 #define SERIAL_COM2 0x2F8
 #define SERIAL_COM3 0x3E8
