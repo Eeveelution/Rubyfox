@@ -4,7 +4,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
-#include "../../arch/port.h"
+#import "../../arch/port.m"
 
 #define SERIAL_COM1 0x3F8
 #define SERIAL_COM2 0x2F8

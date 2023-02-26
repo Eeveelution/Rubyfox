@@ -55,12 +55,14 @@ for byteStr in asFindSplit:
 
     print(AS, str, "-o " + objectName)
 
-for byteStr in objcFindSplit:
-    (str, objectName) = processFilename(byteStr)
+#for byteStr in objcFindSplit:
+#    (str, objectName) = processFilename(byteStr)
+#
+#    if str == "":
+#        continue
+#
+#    print(CC, OBJCFLAGS, str, "-o " + objectName)
 
-    if str == "":
-        continue
-
-    print(CC, OBJCFLAGS, str, "-o " + objectName)
+print("i686-elf-gcc -std=gnu99 -ffreestanding -nostdlib -lgcc -r -g -I./src src/kernel/kernel_main.m -o build/src__kernel__kernel_main.m.o")
 
 print(CC, "-T linker.ld -o rubyfox.bin", LDFLAGS, " ".join(objects))

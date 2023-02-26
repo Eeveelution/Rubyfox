@@ -18,7 +18,7 @@ unsigned char strncmp(const char* str1, const char* str2, unsigned int length) {
         return 0;
     }
 
-    for(int i = 0; i != length; i++) {
+    for(unsigned int i = 0; i != length; i++) {
         if(str1[i] != str2[i]) {
             return 0;
         }
