@@ -10,8 +10,8 @@
 - (id) init {
     serial_port port;
 
-    serial_port_create(SERIAL_COM1, &port);
-    serial_port_write_string(&port, "Hello, Objective-C world!");
+    int result = serial_port_create(SERIAL_COM1, &port);
+    serial_port_write_string(&port, "Hello, Objective-C world!\n");
 
     return self;
 }

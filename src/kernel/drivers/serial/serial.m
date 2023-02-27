@@ -26,7 +26,7 @@ int serial_port_create(uint16_t port, serial_port* out) {
 }
 
 int serial_write_clear(serial_port* serial) {
-    return [IOPort inBytePort: serial->port + 5] & 20;
+    return [IOPort inBytePort: serial->port + 5] & 0x20;
 }
 
 void serial_port_write(serial_port* serial, uint8_t data) {
