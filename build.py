@@ -1,9 +1,11 @@
 import subprocess
 
+INCLUDES = "-I./src -I./src/libobjc -I./src/kernel -I./src/klibc"
+
 CC = "i686-elf-gcc"
 AS = "i686-elf-as"
-CFLAGS = "-std=gnu99 -ffreestanding -g -Wall -Wextra -I./src"
-OBJCFLAGS = "-std=gnu99 -ffreestanding -nostdlib -lgcc -r -g -I./src"
+CFLAGS = "-std=gnu99 -ffreestanding -g -Wall -Wextra " + INCLUDES
+OBJCFLAGS = "-std=gnu99 -ffreestanding -nostdlib -lgcc -r -g "  + INCLUDES
 LDFLAGS = "-ffreestanding -nostdlib -lgcc -g"
 
 cFindOutput = subprocess.check_output(['find', './', "-name", "*.c"])
@@ -63,7 +65,7 @@ for byteStr in asFindSplit:
 #
 #    print(CC, OBJCFLAGS, str, "-o " + objectName)
 
-print("i686-elf-gcc -std=gnu99 -ffreestanding -nostdlib -lgcc -r -g -I./src src/kernel/kernel_main.m -o build/objc_core.o")
+print(f"i686-elf-gcc {OBJCFLAGS} src/kernel/KernelMain.m -o build/objc_core.o")
 
 objects.append("build/objc_core.o")
 

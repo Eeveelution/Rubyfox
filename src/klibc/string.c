@@ -1,3 +1,6 @@
+#ifndef __STRING_C_
+#define __STRING_C_
+
 #include <stddef.h>
 
 size_t strlen(const char* str) {
@@ -30,3 +33,5 @@ unsigned char strncmp(const char* str1, const char* str2, unsigned int length) {
 
     return 1;
 }
+
+#endif

@@ -12,3 +12,6 @@ iso:
 
 run:
 	qemu-system-i386 -s -kernel rubyfox.bin -serial stdio
+
+debug:
+	qemu-system-i386 -s -S -kernel rubyfox.bin -serial stdio

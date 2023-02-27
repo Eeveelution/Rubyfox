@@ -5,12 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "lldb",
-            "request": "launch",
-            "name": "Debug",
+            "name": "(lldb) Attach",
+            "type": "cppdbg",
+            "request": "attach",
             "program": "${workspaceFolder}/rubyfox.bin",
-            "args": [],
-            "cwd": "${workspaceFolder}"
+            "MIMode": "gdb",
+            "debugServer": 1234,
+            "setupCommands": [
+                "target create rubyfox.bin",
+                "gdb-remote localhost:1234"
+            ]
         }
     ]
 }

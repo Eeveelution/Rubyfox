@@ -1,13 +1,18 @@
-//#include "drivers/serial/serial.h"
-#include "kernel_main.h"
+#include "KObject.m"
 
-#import "arch/port.m"
+#import "arch/Port.m"
 #import "drivers/serial/serial.h"
 #import "drivers/serial/serial.m"
 
+@interface KernelMain : KObject
+
++ (id) init;
+
+@end
+
 @implementation KernelMain 
 
-- (id) init {
++ (id) init {
     serial_port port;
 
     int result = serial_port_create(SERIAL_COM1, &port);
@@ -18,10 +23,16 @@
 
 @end
 
-static void __objc_gnu_init(void);
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wall"
+
+static void __objc_gnu_init();
 
 void kernel_main() {
     __objc_gnu_init();
 
     [KernelMain init];
 } 
+
+#pragma GCC diagnostic pop
+

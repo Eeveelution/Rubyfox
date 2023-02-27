@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${default}",
+                "${workspaceFolder}/src/kernel",
+                "${workspaceFolder}/src/libobjc",
+                "${workspaceFolder}/src",
+                "${workspaceFolder}/src/klibc"
+            ],
+            "compilerPath": "/opt/homebrew/bin/i686-elf-gcc",
+            "cStandard": "c99",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-gcc-x86",
+            "configurationProvider": "ms-vscode.makefile-tools"
+        }
+    ],
+    "version": 4
+}

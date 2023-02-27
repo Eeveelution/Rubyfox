@@ -1,5 +1,5 @@
 //#include "../kernel/drivers/serial/serial.h"
-#include "../kernel/string.h"
+#include <string.h>
 
 #include "abi-structs.h"
 
@@ -35,7 +35,6 @@ objc_class* objc_get_class(const char *name)
 
     for(int i = 0; i != module->symtab->class_count; i++) {
         objc_class* current_class = module->symtab->class_category_definitions[i];
-        objc_class* current_classsdf = module->symtab->class_category_definitions[i +1];
 
         if(strncmp(current_class->name, name, 255) == 1) {
             return module->symtab->class_category_definitions[i];
