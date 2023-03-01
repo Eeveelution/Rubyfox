@@ -1,6 +1,6 @@
 #include <stdint.h>
 
-#import "../KObject.m"
+#import <KObject.m>
 
 @interface IOPort : KObject
 

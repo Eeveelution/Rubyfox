@@ -1,8 +1,12 @@
 #include "KObject.m"
 
+#import "AppCodeCompat.h"
+
 #import "arch/Port.m"
 #import "drivers/serial/serial.h"
 #import "drivers/serial/serial.m"
+#import "drivers/serial/NewSerial.m"
+
 
 @interface KernelMain : KObject
 
@@ -13,6 +17,10 @@
 @implementation KernelMain 
 
 + (id) init {
+    COMPort* comPort = [COMPort newPort: COM1];
+
+    [comPort writeBytes: 0 numBytes: 0];
+
     serial_port port;
 
     int result = serial_port_create(SERIAL_COM1, &port);

@@ -1,0 +1,503 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E1D7123ADF6961004FD3A017 /* string.c in Sources */ = {isa = PBXBuildFile; fileRef = E1D71698EB43324C77ED5E4E /* string.c */; };
+		E1D7143A2700F3F174FCB8E6 /* KObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D71E4FBF65C324FA355B3E /* KObject.m */; };
+		E1D7147D710FC6056E2DA985 /* NewSerial.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D71B0BCD54348C6DDF7065 /* NewSerial.m */; };
+		E1D7154894B5757A69BEED9B /* serial.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D71BC297B360D68653D4F3 /* serial.m */; };
+		E1D715781FFBE0EC63FBB1D8 /* Port.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D71B04700FFA7B0AC32773 /* Port.m */; };
+		E1D7178324688A343A044AA9 /* class.c in Sources */ = {isa = PBXBuildFile; fileRef = E1D714D3737E41C62163203B /* class.c */; };
+		E1D71D8CCAE2E6227FB19E82 /* KernelMain.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D712DA8C7797E1266AE5C0 /* KernelMain.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E1D712F095E117F62D1115F8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E1D71238895546995CA362C4 /* boot.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; path = boot.asm; sourceTree = "<group>"; };
+		E1D712DA8C7797E1266AE5C0 /* KernelMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KernelMain.m; sourceTree = "<group>"; };
+		E1D714D3737E41C62163203B /* class.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = class.c; sourceTree = "<group>"; };
+		E1D715168C76A34C2ECB8FB3 /* string.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = string.h; sourceTree = "<group>"; };
+		E1D715D4654E451163560931 /* AppCodeCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCodeCompat.h; sourceTree = "<group>"; };
+		E1D71698EB43324C77ED5E4E /* string.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = string.c; sourceTree = "<group>"; };
+		E1D7170661732A0D36467ED9 /* serial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serial.h; sourceTree = "<group>"; };
+		E1D719F391DB53E351B1AFD1 /* Rubyfox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Rubyfox; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1D71B04700FFA7B0AC32773 /* Port.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Port.m; sourceTree = "<group>"; };
+		E1D71B0BCD54348C6DDF7065 /* NewSerial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewSerial.m; sourceTree = "<group>"; };
+		E1D71BBFD3B4DDE0E8DB54FB /* abi-structs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "abi-structs.h"; sourceTree = "<group>"; };
+		E1D71BC297B360D68653D4F3 /* serial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = serial.m; sourceTree = "<group>"; };
+		E1D71E4FBF65C324FA355B3E /* KObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KObject.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E1D711E669D9EFEE3BFC29A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E1D711DFA66FAD2C5FD93FFC /* klibc */ = {
+			isa = PBXGroup;
+			children = (
+				E1D71698EB43324C77ED5E4E /* string.c */,
+				E1D715168C76A34C2ECB8FB3 /* string.h */,
+			);
+			path = klibc;
+			sourceTree = "<group>";
+		};
+		E1D713FC302BC61722650726 /* serial */ = {
+			isa = PBXGroup;
+			children = (
+				E1D7170661732A0D36467ED9 /* serial.h */,
+				E1D71BC297B360D68653D4F3 /* serial.m */,
+				E1D71B0BCD54348C6DDF7065 /* NewSerial.m */,
+			);
+			path = serial;
+			sourceTree = "<group>";
+		};
+		E1D71569F947C43CA388BEEF = {
+			isa = PBXGroup;
+			children = (
+				E1D71669BC1B3D032EFDEAA6 /* Products */,
+				E1D719EE06422B418F795C5A /* src */,
+			);
+			sourceTree = "<group>";
+		};
+		E1D715EF0D4B569FBF6E61A1 /* drivers */ = {
+			isa = PBXGroup;
+			children = (
+				E1D713FC302BC61722650726 /* serial */,
+			);
+			path = drivers;
+			sourceTree = "<group>";
+		};
+		E1D71669BC1B3D032EFDEAA6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1D719F391DB53E351B1AFD1 /* Rubyfox */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1D719EE06422B418F795C5A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E1D711DFA66FAD2C5FD93FFC /* klibc */,
+				E1D71BA4BF86D918A5AA51D0 /* kernel */,
+				E1D71B0832FADC2B2EA31FF7 /* libobjc */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		E1D71B0832FADC2B2EA31FF7 /* libobjc */ = {
+			isa = PBXGroup;
+			children = (
+				E1D714D3737E41C62163203B /* class.c */,
+				E1D71BBFD3B4DDE0E8DB54FB /* abi-structs.h */,
+			);
+			path = libobjc;
+			sourceTree = "<group>";
+		};
+		E1D71BA4BF86D918A5AA51D0 /* kernel */ = {
+			isa = PBXGroup;
+			children = (
+				E1D71E45882B0A3C0625903C /* arch */,
+				E1D715EF0D4B569FBF6E61A1 /* drivers */,
+				E1D71238895546995CA362C4 /* boot.asm */,
+				E1D71E4FBF65C324FA355B3E /* KObject.m */,
+				E1D712DA8C7797E1266AE5C0 /* KernelMain.m */,
+				E1D715D4654E451163560931 /* AppCodeCompat.h */,
+			);
+			path = kernel;
+			sourceTree = "<group>";
+		};
+		E1D71E45882B0A3C0625903C /* arch */ = {
+			isa = PBXGroup;
+			children = (
+				E1D71B04700FFA7B0AC32773 /* Port.m */,
+			);
+			path = arch;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		E1D7128FBF5C5D9A24D6D740 /* Rubyfox */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = E1D713055EBB5093168C81E4 /* Build configuration list for PBXLegacyTarget "Rubyfox" */;
+			buildPhases = (
+			);
+			buildRules = (
+			);
+			buildToolPath = /usr/bin/make;
+			dependencies = (
+			);
+			name = Rubyfox;
+			passBuildSettingsInEnvironment = 1;
+			productName = Rubyfox;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		E1D71DF5065F73197C390B97 /* Rubyfox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1D7143F5BB83F3BA4EDC010 /* Build configuration list for PBXNativeTarget "Rubyfox" */;
+			buildPhases = (
+				E1D71FBEEFD415A49094E400 /* Sources */,
+				E1D711E669D9EFEE3BFC29A9 /* Frameworks */,
+				E1D712F095E117F62D1115F8 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rubyfox;
+			productName = Rubyfox;
+			productReference = E1D719F391DB53E351B1AFD1 /* Rubyfox */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E1D715205E8353C1748DFC56 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = E1D718BF4B787BE7F9B3DB62 /* Build configuration list for PBXProject "Rubyfox" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E1D71569F947C43CA388BEEF;
+			productRefGroup = E1D71669BC1B3D032EFDEAA6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E1D7128FBF5C5D9A24D6D740 /* Rubyfox */,
+				E1D71DF5065F73197C390B97 /* Rubyfox */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E1D71FBEEFD415A49094E400 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1D7154894B5757A69BEED9B /* serial.m in Sources */,
+				E1D7147D710FC6056E2DA985 /* NewSerial.m in Sources */,
+				E1D71D8CCAE2E6227FB19E82 /* KernelMain.m in Sources */,
+				E1D7143A2700F3F174FCB8E6 /* KObject.m in Sources */,
+				E1D7123ADF6961004FD3A017 /* string.c in Sources */,
+				E1D7178324688A343A044AA9 /* class.c in Sources */,
+				E1D715781FFBE0EC63FBB1D8 /* Port.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E1D713852F2F236F61FFA3CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					APPCODE,
+				);
+			};
+			name = Release;
+		};
+		E1D714B25FFB56AB09046FEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E1D718D4A00F76DB5ADD5C68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					APPCODE,
+				);
+			};
+			name = Debug;
+		};
+		E1D71B8DD82D517D80943535 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					src/kernel,
+					src/klibc,
+					src/libobjc,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E1D71C4B0DFAB50CE74537DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					src/kernel,
+					src/klibc,
+					src/libobjc,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E1D71F19293C1DEBE955C1AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E1D713055EBB5093168C81E4 /* Build configuration list for PBXLegacyTarget "Rubyfox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1D714B25FFB56AB09046FEA /* Debug */,
+				E1D71F19293C1DEBE955C1AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E1D7143F5BB83F3BA4EDC010 /* Build configuration list for PBXNativeTarget "Rubyfox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1D71B8DD82D517D80943535 /* Debug */,
+				E1D71C4B0DFAB50CE74537DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E1D718BF4B787BE7F9B3DB62 /* Build configuration list for PBXProject "Rubyfox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1D718D4A00F76DB5ADD5C68 /* Debug */,
+				E1D713852F2F236F61FFA3CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E1D715205E8353C1748DFC56 /* Project object */;
+}

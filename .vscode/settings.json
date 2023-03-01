@@ -2,5 +2,20 @@
     "files.associations": {
         "stdint.h": "c",
         "abi-structs.h": "c"
-    }
+    },
+    "clang.cxxflags": [
+        "-I./src/kernel",
+        "-I./src/klibc",
+        "-I./src/libobjc",
+    ],
+    "clang.cflags": [
+        "-I./src/kernel",
+        "-I./src/klibc",
+        "-I./src/libobjc",
+    ],
+    "clang.objcflags": [
+        "-I./src/kernel",
+        "-I./src/klibc",
+        "-I./src/libobjc",
+    ]
 }

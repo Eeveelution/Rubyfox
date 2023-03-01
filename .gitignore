@@ -5,3 +5,4 @@ rubyfox.iso
 .idea/
 .vs/
 build.sh
+*.DS_Store
