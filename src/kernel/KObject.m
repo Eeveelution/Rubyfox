@@ -6,12 +6,17 @@
 }
 
 + (instancetype) alloc;
+- (void) release;
 
 @end
 
 @implementation KObject 
 
 + (instancetype) alloc {
+    return self;
+}
+
+- (void) release {
 
 }
 

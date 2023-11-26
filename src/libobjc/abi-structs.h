@@ -38,6 +38,7 @@ typedef struct objc_object {
     objc_class* class_ptr;
 } *id;
 
+typedef objc_selector* SEL;
 typedef id (*IMP)(id, objc_selector*, ...); 
 
 typedef struct {

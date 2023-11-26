@@ -36,11 +36,8 @@ IMP objc_msg_lookup(objc_class *class, objc_selector *sel) {
 /// @brief Used by the Objective-C Compiler to retrieve classes
 /// @param name Name of the class
 /// @return Class or 0 if none is found.
-objc_class* objc_get_class(const char *name)
-{
+objc_class* objc_get_class(const char *name) {
     objc_module* module = current_module;
-
-    objc_category* unused_category = module->symtab->class_category_definitions[0 + module->symtab->class_count];
 
     for(int i = 0; i != module->symtab->class_count; i++) {
         objc_class* current_class = module->symtab->class_category_definitions[i];

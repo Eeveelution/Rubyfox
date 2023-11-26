@@ -7,17 +7,16 @@
 #import "drivers/serial/serial.m"
 #import "drivers/serial/NewSerial.m"
 
-
 @interface KernelMain : KObject
 
-+ (id) init;
++ (void) init;
 
 @end
 
 @implementation KernelMain 
 
-+ (id) init {
-    COMPort* comPort = [COMPort newPort: COM1];
++ (void) init {
+    id comPort = [COMPort newPort: COM1];
 
     [comPort writeBytes: 0 numBytes: 0];
 
@@ -26,7 +25,7 @@
     int result = serial_port_create(SERIAL_COM1, &port);
     serial_port_write_string(&port, "Hello, Objective-C world!\n");
 
-    return self;
+    [comPort release];
 }
 
 @end
